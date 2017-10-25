@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.civica.grads.boardgames.model.Board;
+import com.civica.grads.boardgames.model.Position;
 
 @SpringBootApplication
 @EnableAutoConfiguration
@@ -18,6 +19,11 @@ public class DraughtsServiceGamelogicApplication {
 	@Bean
 	Board board() {
 		return new Board(10);
+	}
+
+	@Bean
+	Position newPosition() {
+		return new Position(0, 0);
 	}
 
 }
